@@ -1,4 +1,4 @@
-## NEXCOM Cloud ERP System 🚀
+# NEXCOM Cloud ERP System 🚀
 
 A modular, scalable, and cloud-native ERP solution designed for modern enterprises and federal deployments. Built with a microservices architecture using Node.js, Docker, and RESTful APIs, this system handles everything from user authentication to inventory, finance, and HR processes.
 
