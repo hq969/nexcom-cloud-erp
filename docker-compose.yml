@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  auth-service:
+    build: ./services/auth-service
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+  inventory-service:
+    build: ./services/inventory-service
+    ports:
+      - "4001:4001"
+    env_file:
+      - .env
+  finance-service:
+    build: ./services/finance-service
+    ports:
+      - "4002:4002"
+    env_file:
+      - .env
+  hr-service:
+    build: ./services/hr-service
+    ports:
+      - "4003:4003"
+    env_file:
+      - .env
+  gateway:
+    build: ./services/gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - auth-service
+      - inventory-service
+      - finance-service
+      - hr-service
